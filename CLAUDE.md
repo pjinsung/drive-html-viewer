@@ -1,10 +1,8 @@
-# Installation
+# 설치 지침
 
-This is a Chrome extension. No build step required.
+이 프로젝트는 Chrome 확장 프로그램입니다. 빌드 과정 없이 폴더 자체를 Chrome에 로드합니다.
 
-`--load-extension`은 Chrome이 실행 중이면 작동하지 않습니다. 기존 Chrome 프로세스를 종료해야 합니다.
-
-**반드시 사용자에게 Chrome이 재시작된다고 알린 후 실행하세요.**
+> Chrome 137부터 `--load-extension` CLI 플래그가 공식 Chrome에서 제거되었습니다. CLI만으로 설치할 수 없습니다.
 
 ## 설치 절차
 
@@ -13,23 +11,10 @@ This is a Chrome extension. No build step required.
 git clone https://github.com/pjinsung/drive-html-viewer.git
 ```
 
-2. Chrome 종료 후 확장과 함께 재실행:
+2. `/chrome` 또는 `--chrome` 브라우저 제어가 가능하면 아래를 자동 수행하세요:
+   - `chrome://extensions` 페이지 열기
+   - **개발자 모드** 토글 활성화
+   - **압축해제된 확장 프로그램을 로드합니다** 클릭
+   - 클론한 폴더 경로 선택
 
-Windows:
-```bash
-taskkill /F /IM chrome.exe 2>/dev/null; "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>" --restore-last-session
-```
-
-macOS:
-```bash
-pkill -f "Google Chrome"; "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>" --restore-last-session
-```
-
-Linux:
-```bash
-pkill chrome; google-chrome --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>" --restore-last-session
-```
-
-`--restore-last-session`은 재시작 전 열려있던 탭을 복원합니다.
-
-사용자에게 수동 절차를 안내하지 마세요. Chrome 재시작 경고 후 직접 실행하세요.
+3. 브라우저 제어가 불가능한 경우에만 사용자에게 위 수동 절차를 안내하세요.
