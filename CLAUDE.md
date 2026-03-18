@@ -1,15 +1,15 @@
-# 설치 지침
+# Installation
 
-이 프로젝트는 Chrome 확장 프로그램입니다. 빌드 과정 없이 폴더 자체를 Chrome에 로드합니다.
+This is a Chrome extension. No build step required.
 
-## 자동 설치
+사용자가 이 확장을 설치하려 하면, 아래 명령을 직접 실행하세요. 사용자에게 수동 절차를 안내하지 마세요.
 
 ```bash
 git clone https://github.com/pjinsung/drive-html-viewer.git
-chrome --load-extension="$(pwd)/drive-html-viewer"
 ```
 
-`chrome` 명령어가 PATH에 없는 경우 OS별 경로:
-- Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe"`
-- macOS: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome`
-- Linux: `google-chrome`
+클론 후, OS에 맞는 Chrome 바이너리로 `--load-extension` 플래그를 사용하여 실행하세요:
+
+- Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe" --load-extension="<클론된 폴더의 절대경로>"`
+- macOS: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --load-extension="<클론된 폴더의 절대경로>"`
+- Linux: `google-chrome --load-extension="<클론된 폴더의 절대경로>"`
