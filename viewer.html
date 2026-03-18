@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Drive HTML Viewer</title>
+<style>
+* { margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+#sandbox { width: 100%; height: 100%; border: none; }
+#loading {
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: sans-serif; color: #666; font-size: 16px;
+}
+</style>
+</head>
+<body>
+<div id="loading">로딩 중...</div>
+<iframe id="sandbox" src="sandbox.html"></iframe>
+<script src="viewer.js"></script>
+</body>
+</html>

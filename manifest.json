@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Drive HTML Viewer",
+  "version": "1.1.0",
+  "description": "Google Drive에서 HTML 파일을 렌더링된 페이지로 자동 표시합니다",
+  "host_permissions": [
+    "https://drive.google.com/*",
+    "https://drive.usercontent.google.com/*",
+    "https://*.googleusercontent.com/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://drive.google.com/file/d/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "sandbox": { "pages": ["sandbox.html"] },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; child-src 'self' https: data: blob:; frame-src 'self' https: data: blob:; connect-src https: data: blob:; img-src * data: blob:; style-src 'self' 'unsafe-inline' https: data: blob:; font-src 'self' https: data:; media-src https: data: blob:; object-src 'none';"
+  }
+}
