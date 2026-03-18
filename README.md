@@ -6,7 +6,7 @@ Google Drive에서 HTML 파일을 소스 코드가 아닌 **렌더링된 페이�
 
 ```bash
 git clone https://github.com/pjinsung/drive-html-viewer.git
-chrome --load-extension="$(pwd)/drive-html-viewer"
+chrome --profile-directory=Default --load-extension="$(pwd)/drive-html-viewer"
 ```
 
 `chrome` 명령어가 PATH에 없는 경우 OS별 경로:

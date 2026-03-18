@@ -10,6 +10,6 @@ git clone https://github.com/pjinsung/drive-html-viewer.git
 
 클론 후, OS에 맞는 Chrome 바이너리로 `--load-extension` 플래그를 사용하여 실행하세요:
 
-- Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe" --load-extension="<클론된 폴더의 절대경로>"`
-- macOS: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --load-extension="<클론된 폴더의 절대경로>"`
-- Linux: `google-chrome --load-extension="<클론된 폴더의 절대경로>"`
+- Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>"`
+- macOS: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>"`
+- Linux: `google-chrome --profile-directory=Default --load-extension="<클론된 폴더의 절대경로>"`
