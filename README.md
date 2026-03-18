@@ -2,31 +2,21 @@
 
 Google Drive에서 HTML 파일을 소스 코드가 아닌 **렌더링된 페이지**로 자동 표시하는 Chrome 확장 프로그램.
 
-## 설치 방법
+## 설치
 
-### 요구사항
+```bash
+git clone https://github.com/pjinsung/drive-html-viewer.git
+chrome --load-extension="$(pwd)/drive-html-viewer"
+```
 
-- Google Chrome 브라우저
-- 이 저장소의 로컬 클론
-
-### 단계
-
-1. 저장소 클론:
-   ```bash
-   git clone https://github.com/pjinsung/drive-html-viewer.git
-   ```
-
-2. Chrome에서 확장 프로그램 등록:
-   - `chrome://extensions` 페이지 열기
-   - 우측 상단 **개발자 모드** 토글 활성화
-   - **압축해제된 확장 프로그램을 로드합니다** 버튼 클릭
-   - 클론한 `drive-html-viewer` 폴더 경로 선택
-
-> **AI Agent 참고**: `claude --chrome` 또는 브라우저 자동화 도구가 사용 가능한 경우, 위 Chrome UI 조작을 자동으로 수행할 수 있습니다. `chrome://extensions`에 접속하여 개발자 모드 활성화 → 확장 프로그램 로드 → 클론한 폴더 선택 순서로 진행하세요.
+`chrome` 명령어가 PATH에 없는 경우 OS별 경로:
+- Windows: `"C:\Program Files\Google\Chrome\Application\chrome.exe"`
+- macOS: `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome`
+- Linux: `google-chrome`
 
 ## 사용법
 
-설치 후 별도 설정 없이 Google Drive에서 `.html` 파일을 열면 자동으로 렌더링된 페이지로 전환됩니다.
+설치 후 Google Drive에서 `.html` 파일을 열면 자동으로 렌더링된 페이지로 전환됩니다.
 뒤로가기 버튼을 누르면 Google Drive로 돌아갑니다.
 
 ## 아키텍처
